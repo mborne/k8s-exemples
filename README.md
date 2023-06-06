@@ -1,5 +1,7 @@
 # k8s-exemples
 
+> Travail en cours...
+
 Quelques exemples pour la découverte de Kubernetes...
 
 ## Prise en main
@@ -41,3 +43,6 @@ kubectl -n whoami apply -f whoami/service.yaml
 kubectl -n whoami get all
 ```
 
+## Licence
+
+[MIT](LICENSE)
