@@ -24,7 +24,7 @@ Quelques exemples pour la découverte de Kubernetes...
 
 ## Ingress
 
-> Objectifs : Travail dans un namespace, découverte du namespace "kube-system",...
+> Objectifs : Ingress et Ingress Controller
 
 * [traefik.md - Installation de Traefik en tant qu'Ingress Controller](traefik.md)
 * [whoami-ingress.md - Exposition du service whoami sur une URL avec une ressource Ingress](whoami-ingress.md)
