@@ -4,42 +4,30 @@ Quelques exemples pour la découverte de Kubernetes...
 
 ## Prise en main
 
-* [Création d'un Pod avec un conteneur nginx pour découverte kubectl](pod-nginx.md)
+> Objectif : prise en main kubectl, découverte Pod, debug...
+
+* [pod-terminal.md - Création d'un Pod avec un conteneur ubuntu](pod-terminal.md)
+* [pod-nginx.md - Création d'un Pod avec un conteneur nginx](pod-nginx.md)
+* [pod-nginx-ko.md - Création d'un Pod avec une mauvaise de nginx](pod-nginx-ko.md)
 
 ## Deployment et Service
 
-* [whoami/deployment.yaml](whoami/deployment.yaml) - Création de plusieurs Pod whoami à l'aide d'un Deployment
-
-```bash
-kubectl apply -f whoami/deployment.yaml
-kubectl get pods
-```
-
-* [whoami/service.yaml](whoami/service.yaml) - Création d'un service whoami devant ces Pods
-
-```bash
-kubectl apply -f whoami/service.yaml
-# Pour http://localhost:8888
-kubectl port-forward svc/whoami 8888:80
-```
+* [whoami-deployment.md - Création de plusieurs Pod whoami à l'aide d'un Deployment](whoami-deployment.md)
+* [whoami-service.md - Création d'un service whoami devant ces Pods](whoami-service.md)
 
 ## Namespaces
 
-* Inspection des namespaces existants et de leur contenu :
+> Objectifs : Travail dans un namespace, découverte du namespace "kube-system",...
 
-```bash
-kubectl get namespaces
-kubectl -n kube-system get pods,svc
-```
+* [ns-inspection.md - Inspection des namespaces existants et de leur contenu](ns-inspection.md)
+* [ns-whoami.md - Déploiement de whoami dans un namespace dédié](ns-whoami.md)
 
-* Création d'un namespace et déploiement dans un namespace :
+## Ingress
 
-```bash
-kubectl create namespace whoami
-kubectl -n whoami apply -f whoami/deployment.yaml
-kubectl -n whoami apply -f whoami/service.yaml
-kubectl -n whoami get all
-```
+> Objectifs : Travail dans un namespace, découverte du namespace "kube-system",...
+
+* [traefik.md - Installation de Traefik en tant qu'Ingress Controller](traefik.md)
+* [whoami-ingress.md - Exposition du service whoami sur une URL avec une ressource Ingress](whoami-ingress.md)
 
 ## Explorer l'API
 
