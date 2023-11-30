@@ -10,7 +10,7 @@
 
 ```bash
 # Créer un pod temporaire avec un terminal interactif
-kubectl run terminal --rm -ti --image=ubuntu:22.04 --port=80 --restart=Never -- /bin/bash
+kubectl run terminal --rm -ti --image=ubuntu:22.04 --restart=Never -- /bin/bash
 # ... exécuter des commandes dans le Pod
 apt-get update
 apt-get install -y figlet
@@ -25,7 +25,7 @@ kubectl get pods
 
 ```bash
 # Créer un pod "terminal" temporaire
-kubectl run terminal --image=ubuntu:22.04 --port=80 --restart=Never -- /bin/sleep 3600
+kubectl run terminal --image=ubuntu:22.04 --restart=Never -- /bin/sleep 3600
 
 # Suivre la création du Pod (attendre "Running")
 kubectl get pods
