@@ -20,6 +20,7 @@ kubectl get deploy whoami -o wide
 # Inspection des Pods du déploiement
 # (filtrage par label app=whoami)
 kubectl get pods -l app=whoami
+# Alternative : lancer la commande suivante dans une fenêtre séparée
 # kubectl get pods -l app=whoami -w
 
 # Passer de 3 à 5 pods

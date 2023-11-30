@@ -7,13 +7,17 @@
 
 ## Principe
 
-* Constater que `*.dev.quadtreeworld.net` est configuré pour résoudre sur l'IP de vagrantbox-1
-* Créer la ressource [whoami-ingress.yaml](whoami-ingress.yaml) s'appuyant sur ce point
-* Tester l'accès à l'URL
+* Vérifier la résolution de nom de `whoami.dev.quadtreeworld.net` sur [vagrantbox-1](https://github.com/mborne/vagrantbox#vagrantbox)
+* Créer la ressource [whoami-ingress.yaml](whoami-ingress.yaml)
+* Tester l'accès au service via une URL et constater la répartition de charge
+
+## Instructions
 
 ```bash
-# Constater que *.dev.quadtreeworld.net est configuré pour résoudre sur l'IP de vagrantbox-1
+# Vérifier la résolution de nom
 host whoami.dev.quadtreeworld.net
+#whoami.dev.quadtreeworld.net is an alias for lb-dev.quadtreeworld.net.
+#lb-dev.quadtreeworld.net has address 192.168.50.201
 
 # Déployer la ressource Ingress et consulter http://whoami.dev.quadtreeworld.net
 kubectl -n whoami apply -f whoami-ingress.yaml

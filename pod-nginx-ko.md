@@ -19,7 +19,7 @@ kubectl get pods
 
 # Récupérer les informations détaillées
 kubectl describe pod nginx-ko
-kubectl get pod nginx -o yaml
+kubectl get pod nginx-ko -o yaml
 
 # Supprimer le Pod
 kubectl delete pod nginx-ko

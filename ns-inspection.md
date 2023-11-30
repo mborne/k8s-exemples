@@ -3,7 +3,7 @@
 ## Principe
 
 * Lister les namespace existants
-* Lister les Pods et Services du namespace "kube-system"
+* Lister les Pods du namespace "kube-system"
 * Lister les Pods dans tous les namespaces
 
 ## Instructions
@@ -12,8 +12,8 @@
 # Lister les namespace existants 
 kubectl get namespaces
 
-# Lister les Pods et Services du namespace "kube-system"
-kubectl get pods,svc -n kube-system
+# Lister les Pods du namespace "kube-system"
+kubectl get pods -n kube-system
 
 # Lister les Pods dans tous les namespaces
 kubectl get pods -A
