@@ -44,12 +44,18 @@ Quelques **exemples pour la découverte des concepts de Kubernetes** dans le cad
 * [explain.md - Explorer les spécifications des objets définis dans l'API Kubernetes](explain.md)
 * [crd-cert-manager.md - Installer cert-manager et explorer les types définis (CRD)](crd-cert-manager.md)
 
-## Aller plus loin
+## Applications
 
 * [mborne/docker-devbox](https://github.com/mborne/docker-devbox) pour des exemples de déploiement plus réalistes avec [Helm](https://helm.sh/).
-* [kubernetes.io - Concepts](https://kubernetes.io/docs/concepts/)
-* [container.training - Deploying and Scaling Microservices with Docker and Kubernetes](https://container.training/kube-selfpaced.yml.html#1)
+
+## Plus d'exemples simples
+
 * [github.com - dgkanatsios/CKAD-exercises](https://github.com/dgkanatsios/CKAD-exercises/#ckad-exercises) pour des exercices corrigés préparant pour la certification CKAD et permettant de creuser certains aspects.
+
+## Allez plus loin
+
+* [container.training - Deploying and Scaling Microservices with Docker and Kubernetes](https://container.training/kube-selfpaced.yml.html#1)
+* [kubernetes.io - Concepts](https://kubernetes.io/docs/concepts/)
 
 ## Licence
 
