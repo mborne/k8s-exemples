@@ -35,7 +35,7 @@ kubectl get deploy whoami -o wide
 [whoami-deployment.yaml](whoami-deployment.yaml) est obtenu à l'aide de la commande suivante :
 
 ```yaml
-kubectl --dry-run=client -o yaml create deploy whoami --image=traefik/whoami:v1.8.0 --replicas=3 > whoami-deployment.yaml
+kubectl --dry-run=client -o yaml create deploy whoami --image=traefik/whoami:v1.10.2 --replicas=3 > whoami-deployment.yaml
 ```
 
 ## Aller plus loin

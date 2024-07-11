@@ -1,10 +1,27 @@
 # Installation de Traefik en tant qu'Ingress Controller
 
-## Principe
+Pour que les ressources **Ingress** soit interprétées, il convient de s'assurer qu'un **Ingress Controller** est installé dans le cluster Kubernetes.
 
-Nous nous appuyons sur un chart Helm existant (https://helm.traefik.io/traefik) pour installer [Traefik](https://doc.traefik.io/traefik/) en tant que **Ingress Controller**.
+## Cas de K3S
 
-## Instructions
+**Avec K3S, l'installation de Traefik est traitée par défaut**. Nous pourrons nous contenter de vérifier :
+
+```bash
+# vérification de la présence de l'ingressclass
+kubectl get ingressclass
+#NAME      CONTROLLER                      PARAMETERS   AGE
+#traefik   traefik.io/ingress-controller   <none>       12m
+
+# Vérification de la présence du service traefik de type loadbalancer avec 
+# EXTERNAL-IP contenant les IP des VM vagrantbox
+kubectl -n kube-system get svc traefik
+# NAME      TYPE           CLUSTER-IP      EXTERNAL-IP         PORT(S)                      AGE
+#traefik   LoadBalancer   10.43.118.132   192.168.50.201,...   80:30614/TCP,443:32086/TCP   25m
+```
+
+## Installation avec Helm
+
+Si tel n'était pas le cas, nous pourrions utiliser [Helm](https://mborne.github.io/cours-devops/annexe/kubernetes/helm.html) pour installer [Traefik](https://doc.traefik.io/traefik/) à l'aide d'un chart existant : https://helm.traefik.io/traefik
 
 ### Installation
 
@@ -15,13 +32,8 @@ helm repo add traefik https://helm.traefik.io/traefik
 # Mettre à jour les dépôts helm
 helm repo update
 
-# Créer le namespace "traefik-system" s'il n'existe pas
-# (nous pourrions aussi ajouter --create-namespace à la commande suivante)
-kubectl create namespace traefik-system --dry-run=client -o yaml | kubectl apply -f -
-
 # Déployer traefik dans le namespace "traefik-system"
-# (avec activation du dashboard au niveau du service)
-helm -n traefik-system upgrade --install traefik traefik/traefik -f traefik/values.yaml
+helm -n traefik-system  upgrade --install --create-namespace traefik traefik/traefik
 ```
 
 ### Contrôle de l'installation

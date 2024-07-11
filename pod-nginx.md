@@ -30,7 +30,11 @@ kubectl delete pod nginx
 Nous pourrions aussi créer le Pod avec la commande suivante exploitant le fichier [pod-nginx.yaml](pod-nginx.yaml) :
 
 ```bash
+# Après avoir cloné le dépôt :
 kubectl apply -f pod-nginx.yaml
+
+# Directement depuis github :
+kubectl apply -f https://raw.githubusercontent.com/mborne/k8s-exemples/master/pod-nginx.yaml
 ```
 
 ## Remarques

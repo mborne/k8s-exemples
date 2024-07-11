@@ -18,16 +18,10 @@ Quelques **exemples pour la découverte des concepts de Kubernetes** dans le cad
 
 ## Service
 
-> Objectif : créer un service ClusterIP, accéder au service,...
+> Objectif : créer un service, accéder au service,...
 
 * [whoami-service.md - Création d'un service whoami devant ces Pods](whoami-service.md)
-
-## Ingress
-
-> Objectifs : Créer une ressource Ingress (noter la variabilité selon les environnements), déployer Ingress Controller pour tester...
-
-* [traefik.md - Installation de Traefik en tant qu'Ingress Controller](traefik.md)
-* [whoami-ingress.md - Exposition du service whoami sur une URL avec une ressource Ingress](whoami-ingress.md)
+* [whoami-service-lb.md - Exposition du service whoami sur une IP publique](whoami-service-lb.md)
 
 ## Namespace
 
@@ -35,6 +29,13 @@ Quelques **exemples pour la découverte des concepts de Kubernetes** dans le cad
 
 * [ns-inspection.md - Inspection des namespaces existants et de leur contenu](ns-inspection.md)
 * [ns-whoami.md - Déploiement de whoami dans un namespace dédié](ns-whoami.md)
+
+## Ingress
+
+> Objectifs : Créer une ressource Ingress (noter la variabilité selon les environnements), déployer Ingress Controller pour tester...
+
+* [traefik.md - Installation de Traefik en tant qu'Ingress Controller](traefik.md)
+* [whoami-ingress.md - Exposition du service whoami sur une URL avec une ressource Ingress](whoami-ingress.md)
 
 ## API
 

@@ -15,7 +15,7 @@ spec:
         app: whoami
     spec:
       containers:
-      - image: traefik/whoami:v1.8.0
+      - image: traefik/whoami:v1.10.2
         name: whoami
         ports:
         - name: http
