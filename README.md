@@ -49,14 +49,11 @@ Quelques **exemples pour la découverte des concepts de Kubernetes** dans le cad
 
 * [mborne/docker-devbox](https://github.com/mborne/docker-devbox) pour des exemples de déploiement plus réalistes avec [Helm](https://helm.sh/).
 
-## Plus d'exemples simples
+## Voir aussi
 
+* [container.training - Deploying and Scaling Microservices with Docker and Kubernetes](https://container.training/kube-selfpaced.yml.html#1) (~2400 slides)
 * [github.com - dgkanatsios/CKAD-exercises](https://github.com/dgkanatsios/CKAD-exercises/#ckad-exercises) pour des exercices corrigés préparant pour la certification CKAD et permettant de creuser certains aspects.
-
-## Allez plus loin
-
-* [container.training - Deploying and Scaling Microservices with Docker and Kubernetes](https://container.training/kube-selfpaced.yml.html#1)
-* [kubernetes.io - Concepts](https://kubernetes.io/docs/concepts/)
+* [kubernetes.io - Concepts](https://kubernetes.io/docs/concepts/) pour la documentation officielle incluant des exemples.
 
 ## Licence
 
