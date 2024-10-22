@@ -22,3 +22,9 @@ host whoami.dev.quadtreeworld.net
 # Déployer la ressource Ingress et consulter http://whoami.dev.quadtreeworld.net
 kubectl -n whoami apply -f whoami-ingress.yaml
 ```
+
+## Complément
+
+Voir [whoami-ingress-gke.yaml](whoami-ingress-gke.yaml) qui inclue les annotations pour demander de génération d'un certificat LetsEncrypt avec [cert-manager](https://cert-manager.io/).
+
+
