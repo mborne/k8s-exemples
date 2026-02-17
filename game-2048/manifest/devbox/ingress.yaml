@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: game-2048
+  annotations:
+    cert-manager.io/cluster-issuer: "selfsigned"
+spec:
+  ingressClassName: traefik
+  rules:
+  - host: game-2048.dev.localhost
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: game-2048
+            port:
+              number: 80
+  tls:
+  - hosts:
+      - game-2048.dev.localhost
+    secretName: game-2048-cert

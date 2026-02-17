@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: game-2048
+  name: game-2048
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: game-2048
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: game-2048
+    spec:
+      containers:
+      - image: twoseven1408/game-2048:latest
+        name: docker-2048
+
+
