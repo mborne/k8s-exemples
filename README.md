@@ -48,6 +48,7 @@ Quelques **exemples pour la découverte des concepts de Kubernetes** dans le cad
 ## Applications
 
 * [mborne/docker-devbox](https://github.com/mborne/docker-devbox) pour des exemples de déploiement plus réalistes avec [Helm](https://helm.sh/).
+* [game-2048](game-2048/README.md)
 
 ## Voir aussi
 
